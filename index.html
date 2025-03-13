@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Haris</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Modal Input Nama -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content">
+            <h2>Masukkan Nama Anda</h2>
+            <input type="text" id="userName" placeholder="Nama Anda" required>
+            <button onclick="saveName()">Submit</button>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <h1>RevoU</h1>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#our-profile">Our Profile</a>
+            <a href="#message-us">Message Us</a>
+        </nav>
+    </header>
+
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Content -->
+        <section id="home">
+            <header>
+                <h1>Hi User, Welcome to my Portfolio</h1>
+            </header>
+
+            <!-- Banner Autoslide -->
+            <div class="banner-img banner-1"></div>
+            <div class="banner-img banner-2"></div>
+            <div class="banner-img banner-3"></div>
+        </section>
+
+        <hr />
+
+        <!-- Our Profile Content -->
+        <section id="our-profile">
+            <header>
+                <h1>Our Profile</h1>
+            </header>
+
+            <div class="our-profile-content">
+                <img src="assets/gambar4.jpg" alt="Profile Picture" class="profile-picture">
+                <h2>Haris Kurniawan</h2>
+                <p>Saya adalah mahasiswa Teknik Informatika di Universitas Muhammadiyah Cirebon dengan minat dalam pengembangan perangkat lunak dan teknologi. Selain itu, saya memiliki hobi dalam fotografi mainan dan fotografi jalanan, yang membantu saya mengeksplorasi kreativitas dan detail visual. Dalam bidang pengembangan perangkat lunak, saya telah mengerjakan beberapa proyek, termasuk sistem penjualan game store dan toko baju berbasis PHP Native, yang memperkuat pemahaman saya tentang manajemen database serta pemrograman web.</p>
+            </div>
+            
+        </section>
+
+        <!-- Message Us Content -->
+        <section id="message-us">
+            <header>
+                <h1>Message Us</h1>
+            </header>
+            <div class="message-result-container">
+                <!-- Form Message Us -->
+                <div class="message-us-content">
+                    <h3>Message Us</h3>
+                    <form id="messageForm" onsubmit="return validateForm(event)">
+                        <div class="form-group">
+                            <label for="name-input">Name:</label>
+                            <input type="text" id="name-input" name="name" placeholder="Your Name" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="ttl">Tanggal Lahir:</label>
+                            <input type="date" id="ttl" name="ttl" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="jk">Jenis Kelamin:</label>
+                            <div class="gender-options">
+                                <input type="radio" id="laki-laki" name="jk" value="Laki-laki" required>
+                                <label for="laki-laki">Laki-laki</label>
+                                <input type="radio" id="perempuan" name="jk" value="Perempuan" required>
+                                <label for="perempuan">Perempuan</label>
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="pesan">Pesan:</label>
+                            <textarea id="pesan" name="pesan" placeholder="Your Message" required></textarea>
+                        </div>
+            
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            
+                <!-- Hasil Submit -->
+                <div class="result-us-content">
+                    <h3>Hasil Submit:</h3>
+                    <div class="result-group">
+                        <label>Nama:</label>
+                        <span id="result-name"></span>
+                    </div>
+            
+                    <div class="result-group">
+                        <label>Tanggal Lahir:</label>
+                        <span id="result-ttl"></span>
+                    </div>
+            
+                    <div class="result-group">
+                        <label>Jenis Kelamin:</label>
+                        <span id="result-jk"></span>
+                    </div>
+            
+                    <div class="result-group">
+                        <label>Pesan:</label>
+                        <span id="result-pesan"></span>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer>
+        <p>&copy; 2025 Portfolio Haris Kurniawan</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
